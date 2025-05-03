@@ -1,0 +1,31 @@
+<div style="text-align: center; margin-top: 50px;"> 
+  <h1>Cálculo del Factorial</h1> 
+ 
+  <input 
+    type="number" 
+    [(ngModel)]="numero" 
+    placeholder="Introduce un número (1-9)" 
+    style="margin-right: 10px; padding: 10px; font-size: 1.1em; border-radius: 5px; border: 2px solid #ff69b4;" 
+  /> 
+  
+  <button 
+    (click)="calcularFactorial()" 
+    style="padding: 12px 20px; background-color: #ff6347; color: white; font-size: 1.2em; border-radius: 8px; border: none; cursor: pointer; transition: background-color 0.3s;">
+    Calcular Factorial
+  </button> 
+
+  <div *ngIf="error" style="color: red; margin-top: 10px; font-size: 1.1em;"> 
+    {{ error }} 
+  </div> 
+  
+  <h2 *ngIf="resultado !== null" style="margin-top: 20px; font-size: 1.3em; color: #32cd32;"> 
+    Resultado: {{ resultado }} 
+  </h2> 
+</div> 
+
+<!-- Estilo adicional para el botón en hover -->
+<style>
+  button:hover {
+    background-color: #ff4500; /* Cambia el color del botón cuando el cursor pasa por encima */
+  }
+</style>
